@@ -5,13 +5,12 @@ var mapdata = Array(16)
 for (let k = 0; k < mapsize; k++){
     mapdata[k] = Array(16)
     for (let j = 0; j < mapsize; j++){
-        mapdata[k][j] = 0
+        mapdata[k][j] = Math.floor(Math.random()*2);
     }
 }
 var unitdata = []
-window.alert("test2")
-unitdata.push(new unit(2,2))
-window.alert("test3")
+unitdata.push(new unit(2,2,0))
+unitdata.push(new mech(2,3,0))
 
 function getGameState(){
     var url = window.location.href
